@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <link rel="stylesheet" href="{% static 'css/ml_ds_home.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Data Science</h1>
+    </header>
+
+    <main>
+        <!-- Data Science Libraries Section -->
+        <section class="libraries">
+            <a href="{% url 'ds_seaborn' %}">
+                <h2>Data Science Libraries</h2>
+                <div class="library">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Seaborn</h3>
+                    <p>Seaborn is a Python visualization library based on matplotlib that provides a high-level interface for drawing attractive statistical graphics.</p>
+                </div>
+            </a>
+
+            <a href="{% url 'ds_stats' %}">
+                <div class="library">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Statsmodels</h3>
+                    <p>Statsmodels is a Python module that allows users to explore data, estimate statistical models, and perform statistical tests.</p>
+                </div>
+            </a>
+
+            <a href="{% url 'ds_numpy' %}">
+                <div class="library">
+                    <i class="fas fa-square-root-alt"></i>
+                    <h3>NumPy</h3>
+                    <p>NumPy is the fundamental package for scientific computing with Python, providing support for arrays, mathematical functions, and more.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/">Go Back</a>
+    </footer>
+</body>
+</html>

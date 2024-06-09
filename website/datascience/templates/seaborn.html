@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/ds_models.css' %}">
+    <title>Seaborn</title>
+</head>
+<body>
+    <h3 id="head">Select a Plot for Analysis</h3>
+    <div class="library">
+        <a href={% url 'barplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Seaborn Bar Plot</h3>
+            <p>Bar plots represent categorical data with rectangular bars, where the length of the bar corresponds to the value of the variable.</p>
+        </div>
+    </a>
+    
+    <a href={% url 'histplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-line"></i>
+            <h3>Seaborn Line Plot</h3>
+            <p>Line plots display information as a series of data points called 'markers' connected by straight lines.</p>
+        </div>
+    </a>
+    
+        <a href={% url 'catplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Seaborn Pie Chart</h3>
+            <p>Pie charts are circular statistical graphics, which are divided into slices to illustrate numerical proportions.</p>
+        </div>
+    </a>
+    
+        <a href={% url 'pairplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-area"></i>
+            <h3>Seaborn Area Plot</h3>
+            <p>Area plots are similar to line plots, but the area between the x-axis and the line is filled with color, indicating the volume beneath the line.</p>
+        </div>
+    </a>
+    
+        <a href={% url 'boxplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-scatter"></i>
+            <h3>Seaborn Scatter Plot</h3>
+            <p>Scatter plots display data points as individual markers, with one variable on each axis.</p>
+        </div>
+    </a>
+
+        <a href={% url 'lineplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-line"></i>
+            <h3>Seaborn Violin Plot</h3>
+            <p>Violin plots are used to visualize the distribution of numeric data across several levels of one or more categorical variables.</p>
+        </div>
+    </a>
+    
+        <a href={% url 'scatterplot' %}>
+        <div class="plot">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Seaborn Heatmap</h3>
+            <p>A heatmap is a graphical representation of data in which values are represented by colors. Heatmaps are useful for visualizing the distribution and correlation of data.</p>
+        </div>
+    </a>
+    </div>
+    
+</body>
+</html>

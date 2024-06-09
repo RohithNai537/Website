@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Machine Learning and Data Science Website</h1>
+    </header>
+
+    <main>
+        <a href={% url 'ml_home' %}>
+        <section class="option">
+            <h2>Machine Learning</h2>
+            <p>Explore the world of Machine Learning</p>
+        </section>
+    </a>
+
+    <a href={% url 'ds_home' %}>
+        <section class="option" onclick="window.location.href='np_ds.html'">
+            <h2>Data Science</h2>
+            <p>Analyze the data through Data Science</p>
+        </section>
+    </a>
+
+    <a href={% url 'dp_home' %}>
+
+        <section class="option" onclick="window.location.href='np_dp.html'">
+            <h2>Data Preprocessing</h2>
+            <p>Prepare your dataset for analysis</p>
+        </section>
+    </a>
+
+        <section class="option">
+            <h2>Upload Dataset</h2>
+            <p>Upload your dataset to analyze the data</p>
+            <!-- Form for file upload -->
+            <form id="uploadForm" action="{% url 'create_dataset' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="upload-container">
+                    <label for="fileInput" class="file-label">Choose File</label>
+                    <input type="file" id="fileInput" name="dataset" required>
+                </div>
+                <input type="submit" value="Upload">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="login-signup">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}"><button>Logout</button></a>
+            {% else %}
+          <a href="{% url 'login' %}"><button>Log In</button></a>
+          <a href="{% url 'register' %}"><button>Register</button></a>
+            {% endif %}
+        </div>
+    </footer>
+</body>
+</html>

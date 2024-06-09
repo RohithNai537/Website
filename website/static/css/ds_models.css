@@ -1,0 +1,47 @@
+.library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plot {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(74, 74, 126); /* Change to your desired color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.plot i {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.plot h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: peru;
+}
+
+.plot p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.plot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#head{
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 50px;
+    color:blue;
+    text-decoration: dashed blue underline;
+}
